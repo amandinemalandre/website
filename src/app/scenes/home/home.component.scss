@@ -1,0 +1,28 @@
+@import '../../../styles.scss';
+
+.center {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: row;
+}
+
+
+.center .self {
+  align-self: center;
+}
+
+h1 {
+  font-family: $font-title;
+  font-size: 5rem;
+  font-weight: lighter;
+}
+
+p {
+  font-family: $font-text;
+}
+
+p strong {
+  font-variant: small-caps;
+}
+

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+$lighter: #E1D0C9;
+$light: #BC8F7D;
+$intermediate: #813859;
+$dark: #472D1F;
+$darker: #C58BA7;
+$font-title: 'Great Vibes', cursive;
+$font-text: 'Lora', serif;
+$font-menu: 'Anonymous Pro', monospace;
+
+body {
+  background-color: $lighter;
+}
+
+

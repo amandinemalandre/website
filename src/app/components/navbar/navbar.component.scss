@@ -1,0 +1,85 @@
+@import '../../../styles.scss';
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: $darker;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  font-family: $font-menu;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.topnav div.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav div a {
+  float: left;
+  color: $dark;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+/* Change the color of links on hover */
+.topnav div a:hover,
+.menu-content ul li a:hover {
+  cursor: pointer;
+}
+
+
+/* Add a color to the active/current link */
+.topnav div a.active,
+.menu-content ul li a.active {
+  background-color: $dark;
+  color: $darker;
+}
+
+
+
+.topnav div a.inactive {
+  background-color: $darker;
+  color: $dark;
+}
+
+
+.menu-content {
+  background-color: $darker;
+  width: 300px;
+  z-index: 1;
+  position: fixed;
+}
+
+
+.menu-content ul {
+  list-style-type: none;
+  padding: 0;
+  width: 300px;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: $dark;
+}
+
+.topnav div a span {
+  margin-bottom: 2px;
+  display: block;
+  height: 3px;
+  width: 20px;
+  position: relative;
+  background: $intermediate;
+  border-radius: 3px;
+  transform-origin: 4px 0;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}

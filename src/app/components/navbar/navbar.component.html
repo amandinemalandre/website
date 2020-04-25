@@ -1,0 +1,21 @@
+<div class="topnav" [ngStyle]="{'justify-content': justifyContentStyle}">
+  <div *ngIf = "!mobile && configuration" class="content">
+    <ng-container *ngFor="let config of configuration">
+      <a [routerLink]="[config.route]" [routerLinkActive]="['active']">{{config.title}}</a>
+    </ng-container>
+  </div>
+  <div>
+    <div *ngIf="mobile">
+      <a [ngClass]="!collapsed ? 'active' : 'inactive'" (click)="collapsed = !collapsed">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="menu-content" *ngIf = "!collapsed && mobile && configuration">
+  <ul>
+    <li *ngFor="let config of configuration"><a [routerLink]="[config.route]" [routerLinkActive]="['active']" (click)="collapsed = true">{{config.title}}</a></li>
+  </ul>
+</div>
